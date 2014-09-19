@@ -1224,7 +1224,7 @@ int hurl_parse_response_code(char *line, char **code_text) {
 	return response_code;
 }
 
-int hurl_connection_response(HURLConnection *connection, HURLPath *path, char **buffer, size_t *buffer_len, size_t *data_len,
+int hurl_connection_response(HURLConnection *connection, HURLPath *path, char **buffer, unsigned long *buffer_len, unsigned long  *data_len,
 		enum HTTPFeatureSupport *feature_persistence) {
 	char *line;
 	ssize_t recv_len = 1; /* Set to 1 to enter receive loop first time */
